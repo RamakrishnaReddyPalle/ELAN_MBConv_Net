@@ -2,7 +2,7 @@
 
 ---
 ## Overview
-- This repository contains my experimental work and development scripts for testing various pretrained backbones on COCO and custom images, as well as the implementation of a custom architecture that i made using ELAN and MBConv blocks.
+- This repository contains my experimental work and development scripts for testing various [Keras3 pretrained backbones](https://keras.io/api/keras_cv/models/backbones/) on COCO and custom images, as well as the implementation of a custom architecture that i made using ELAN and MBConv blocks.
 - The main aim of this research was to enhance small object detection in large, cluttered images by comparing multiple backbone models and developing a novel architecture for improved feature retention.
 
 ## Research Aim and Motivation
@@ -17,30 +17,39 @@
 ## Experimental Process
 
 ### Backbone Testing & Activation Maps
-The initial experiments involved testing the following backbones, pretrained on the **COCO 2017** dataset:
+The initial experiments involved testing the following backbones, pretrained on the **[COCO 2017](https://cocodataset.org/#home)** dataset:
 - **YOLOv8**: A state-of-the-art object detection model known for speed but struggled with fine-grained details in small objects.
 - **Vision Transformer (ViT)**: Global attention made it less effective for small objects.
 - **EfficientNet**: Balanced but missed crucial details in small objects.
 - **CSPDarknet**: Showcased the best retention of small object details due to its deep feature extraction capabilities.
 
 Each model was evaluated by passing:
-- A **COCO 2017** image.
+- A **COCO 2017** image
+  ![](Experiment/Data/download1.png)
 - A **custom large image** created specifically for testing (3000x3000 pixels with small objects and colored noise to simulate occlusion and clutter).
-
-I visualized the **activation maps** from different layers of these models to analyze their performance, particularly focusing on small object detection.
+  ![](Experiment/Data/illustrator_4.jpg)
 
 ### Custom Image Creation
 To simulate real-world challenges like occlusion, clutter, and small object detection, I created a custom large image. This image includes:
 - Small objects (similar to electrical legends in floor plans).
 - Colored noise textures and various occlusions to test the model's robustness in detecting objects under challenging conditions.
 
-The custom image was crucial for understanding how different models handled cluttered environments and occlusions.
+- I visualized the **activation maps** from different layers of these models to analyze their performance, particularly focusing on small object detection.
+- The custom image was crucial for understanding how different models handled cluttered environments and occlusions.
 
 ### Key Findings from the Experiments
 1. **YOLOv8**: Struggled with small objects, especially in cluttered or noisy environments.
 2. **EfficientNet**: Balanced between speed and accuracy but failed to capture intricate details.
 3. **ViT**: Poor at small object detection due to its global attention mechanism.
 4. **CSPDarknet**: Best at retaining small object details from the early layers, performing the best overall.
+
+- **YOLOv8 Backbone Feature extraction maps:**
+  <img src="assets/yolo1" alt="YOLOv8 feature extraction 1" style="width:100%;">
+  <img src="assets/yolo2" alt="YOLOv8 feature extraction 2" style="width:100%;">
+
+- **CSPDarknet53 Backbone Feature extraction maps:**
+  <img src="assets/csp1" alt="CSPDarknet feature extraction 1" style="width:100%;">
+  <img src="assets/csp2" alt="CSPDarknet feature extraction 2" style="width:100%;">
 
 These insights led to the design and implementation of my custom model.
 
@@ -66,7 +75,7 @@ All development was carried out on **Windows Subsystem for Linux (WSL)**. To rep
 
 1. Clone the repository:
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/RamakrishnaReddyPalle/What-does-feauture-extraction-look-like.git
    cd path/to/clone/folder
    ```
 
