@@ -28,12 +28,12 @@ The initial experiments involved testing the following backbones, pretrained on 
 - **CSPDarknet**: Demonstrated the best retention of small object details due to its deep feature extraction capabilities.
 
 Each model was evaluated by passing:
-- A **COCO 2017 image**  
+- A **COCO 2017 image:**  
   <div align="center">
     <img src="Experiment/Data/download1.png" alt="COCO Test Image" style="width:50%;">
   </div>
 
-- A **custom large image** (3000x3000 pixels), created specifically for testing, containing small objects and colored noise to simulate occlusion and clutter.  
+- A **custom large image:** (3000x3000 pixels), created specifically for testing, containing small objects and colored noise to simulate occlusion and clutter.  
   <div align="center">
     <img src="Experiment/Data/illustrator_4.jpg" alt="Custom Large Image" style="width:50%;">
   </div>
@@ -56,23 +56,23 @@ The **activation maps** from different layers of these models were visualized to
 4. **CSPDarknet**: Retained small object details from the early layers, performing the best overall.
 
 ### YOLOv8 Backbone Feature Extraction Maps
-- **On COCO image**  
+- **On COCO image:**  
   <div align="center">
     <img src="assets/yolo1.png" alt="YOLOv8 Feature Extraction on COCO Image" style="width:50%;">
   </div>
 
-- **On Custom image**  
+- **On Custom image:**  
   <div align="center">
     <img src="assets/yolo2.png" alt="YOLOv8 Feature Extraction on Custom Image" style="width:50%;">
   </div>
 
 ### CSPDarknet53 Backbone Feature Extraction Maps
-- **On COCO image**  
+- **On COCO image:**  
   <div align="center">
     <img src="assets/csp1.png" alt="CSPDarknet Feature Extraction on COCO Image" style="width:50%;">
   </div>
 
-- **On Custom image**  
+- **On Custom image:**  
   <div align="center">
     <img src="assets/csp2.png" alt="CSPDarknet Feature Extraction on Custom Image" style="width:50%;">
   </div>
