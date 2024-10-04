@@ -152,7 +152,7 @@ Through this research, I identified key limitations in existing backbones for sm
 ---
 
 ## Licensing and Acknowledgements
-All work in this repository is my own, and I claim full ownership of the code, experiments, and results. If you wish to use or modify this code, please refer to the **LICENSE** file for details on permissions.
+All work in this repository is my own, and I claim full ownership of the code, experiments, and results. If you wish to use or modify this code, please refer to the **![LICENSE](LICENSE)** file for details on permissions.
 
 ---
 
