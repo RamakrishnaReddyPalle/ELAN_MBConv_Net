@@ -7,7 +7,7 @@
 
 ## Research Aim and Motivation
 - My research focused on developing an efficient deep learning model for **detecting small objects in large, high-resolution images**, such as architectural floor plans with electrical legends.
-- This is a continuation of the work I did on ![automating floor plan detection tasks using **YOLOv8**]().
+- This is a continuation of the work I did on [automating floor plan detection tasks using **YOLOv8**](https://github.com/RamakrishnaReddyPalle/AAB-test-app.git).
 - However, through my analysis, I found limitations in small object detection, which led me to experiment with different backbones and develop my own.
 
 **The project involved:**
