@@ -91,7 +91,7 @@ Each notebook in the `/notebooks` folder can be used to test different backbones
 
 ### 4. Building and Running Custom Model
 ```bash
-scratch_model.ipynb
+Network Architecture Build-up/scratch_model.ipynb
 ```
 
 ## Results and Conclusion
